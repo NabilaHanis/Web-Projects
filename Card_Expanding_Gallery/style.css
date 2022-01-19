@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    display: flex;   
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height:  100vh;
+    overflow: hidden;
+}
+
+header h1 {
+margin-top: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    flex: 0.3;
+    margin: 5px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    margin: 0;
+    opacity: 0;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.panel.active {
+    flex: 7;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.4s ease-in 0.5s;
+}
+
+.one {
+    background-image: url(images/buffaloBayou.jpg); /*Credit to: rome-wilkerson-kIAFWEcQ9Dw-unsplash */
+}
+
+.two {
+    background-image: url(images/museumFineArts.jpg); /*Credit to: adrian-n-oJhaFeoRFDw-unsplash */
+}
+
+.three {
+    background-image: url(images/hermannParkDrive.jpg); /*Credit to: alisa-matthews-8GIJ5GyFYC0-unsplash */
+}
+
+.four {
+    background-image: url(images/houstonBcycle.jpg); /*Credit to: ricky-davis-01tsitdx3RI-unsplash*/
+}
+
+.five {
+    background-image: url(images/minuteMaid.jpg); /*Credit to: ty-welch-D5POJilPPYY-unsplash*/
+}
+
+.six {
+    background-image: url(images/beatlesStatues.jpg); /*Credit to: alisa-matthews-5trd7HseEA8-unsplash*/
+}
+
+.seven {
+    background-image: url(images/waterwall.jpg); /*Credit to: chad-kirchoff-XBrRa9fuSpQ-unsplash*/
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    text-align: center;    
+    bottom: 0;      
+    font-size: 13px;
+}
+
+footer .copyright{
+    font-size: 10px; 
+    margin-bottom: 0;
+}
+
+
+@media(max-width: 768px) {
+    .container {
+        width: 90vw;
+    }
+
+    .panel {
+        flex: 0.5;
+    }
+
+    .panel:nth-of-type(4), .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(6), .panel:nth-of-type(7) {
+        display: none;
+    }
+
+    footer {     
+        font-size: 10px;
+    }
+}
